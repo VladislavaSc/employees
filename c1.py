@@ -3,13 +3,11 @@ class Employee:
     def __init__(self, name, surname, pay):
         self.name = name
         self.surname = surname
-        self.email = f'{self.name}.{self.surname}@myjobmail.com'
+        self.email = f'{self.name.lower()}.{self.surname.lower()}@myjobmail.com'
         self.pay = pay
 
-emp1 = Employee('Ivan', 'Ivanov', 60000)
+if __name__ == '__c1__':
+    emp1 = Employee('Ivan', 'Ivanov', 60000)
 
-print(emp1)
-print(emp1.name)
-print(emp1.surname)
-print(emp1.pay)
-print(emp1.email)
+# TestCase#1 Email
+    assert emp1.email == 'Ivan.Ivanov@myjobmail.com'
