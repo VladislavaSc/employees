@@ -10,6 +10,18 @@ class Employee:
               # self.__email = f'{self.name.lower()}.{self.surname.lower()}@myjobmail.com'
         self.__pay = pay
 
+    def __repr__(self):
+        return f'{self.__class__.__name__}({self.name}, {self.surname}, {self.pay})'
+
+    def __str__(self):
+        return f'{self.fullname} ({self.pay})'
+
+    def __len__(self):
+        return len(self.fullname)
+
+    def __add__(self, other):
+        return self.pay + other.pay
+
     def raise_pay(self):
         self.__pay *= self.raise_coef
 
@@ -53,6 +65,9 @@ class Employee:
 
 if __name__ == '__c1__':
     emp1 = Employee('John', 'Johnson', 60000)
+    emp2 = Employee('Jacob', 'Smith', 100000)
+
+    result = emp1 + emp2
 
     # TestCase#1 Email
     assert emp1.email == 'john.johnson@myjobmail.com'
@@ -93,3 +108,8 @@ if __name__ == '__c1__':
     emp1.fullname = 'John Johnson'
     assert emp1.name == 'John'
     assert emp1.surname == 'Johnson'
+
+    print(repr(emp1))
+    # print(emp1)
+    # print(len(emp1))
+    print(result)
