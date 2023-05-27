@@ -14,22 +14,25 @@ class Developer(Employee):
     raise_coef = 1.1
 
 
-class Tester(Employee):
-    pass
+def __init__(self, name,surname, pay, prog_lang):
+    self.prog_lang = prog_lang
 
 
 emp1 = Employee('Adam', 'Miller', 50000)
-print(emp1.pay)
-emp1.raise_pay()
-print(emp1.pay)
+# print(emp1.pay)
+# emp1.raise_pay()
+# print(emp1.pay)
+print(emp1.__dict__)
 
 dev1 = Developer('John', 'Smith', 100000)
 dev2 = Developer('Michel', 'Johnson', 150000)
 
-print(dev1.pay)
-dev1.raise_pay()
-print(dev1.pay)
+# print(dev1.pay)
+# dev1.raise_pay()
+# print(dev1.pay)
 
-print(dev2.pay)
-dev2.raise_pay()
-print(dev2.pay)
+# print(dev2.pay)
+# dev2.raise_pay()
+# print(dev2.pay)
+
+print(dev1.__dict__)
