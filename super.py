@@ -14,7 +14,7 @@ class Developer(Employee):
     raise_coef = 1.1
 
     def __init__(self, name, surname, pay, prog_lang):
-        super().__dict__(name, surname, pay)
+        super().__init__(name, surname, pay)
         self.prog_lang = prog_lang
 
 
