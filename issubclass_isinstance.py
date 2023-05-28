@@ -15,7 +15,7 @@ class Employee:
             # return self.pay + other.pay
         if issubclass(other.__class__, self.__class__):
             return self.pay + other.pay
-        return None
+        raise Exception
 
 
 class Developer(Employee):
