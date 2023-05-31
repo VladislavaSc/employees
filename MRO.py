@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Employee(ABC):
 
     def __init__(self, name, surname, pay):
@@ -24,6 +25,7 @@ class Developer(Mixinlog, Employee):
         print('Developer added')
         super().__init__(name, surname, pay)
         self.prog_lang = prog_lang
+
 
 dev = Developer('Sam', 'Smith', 100000, 'python')
 dev = Developer('Sam', 'Smith', 100000, 'python')
